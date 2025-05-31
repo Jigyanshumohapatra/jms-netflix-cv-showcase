@@ -50,7 +50,7 @@ const certifications: Certification[] = [
   {
     name: 'Foundations of Digital Business',
     issuer: 'IIM Bangalore',
-    issuerLogo: 'https://www.iimb.ac.in/sites/default/files/inline-images/iimb-logo.png',
+    issuerLogo: 'https://static.wikia.nocookie.net/logopedia/images/9/90/440px-IIM_Bangalore_Logo.svg.png',
     issuerUrl: 'https://www.iimb.ac.in/',
     certificateUrl: 'https://drive.google.com/file/d/1XIcWj1-OnmutwEC_nJ57BDK6YZKqSOM1/view?usp=drive_link',
     category: 'Business & Strategy'
@@ -58,7 +58,7 @@ const certifications: Certification[] = [
   {
     name: 'Marketing Management',
     issuer: 'IIM Bangalore',
-    issuerLogo: 'https://www.iimb.ac.in/sites/default/files/inline-images/iimb-logo.png',
+    issuerLogo: 'https://static.wikia.nocookie.net/logopedia/images/9/90/440px-IIM_Bangalore_Logo.svg.png',
     issuerUrl: 'https://www.iimb.ac.in/',
     certificateUrl: 'https://drive.google.com/file/d/1hYaha9vmWfyAQgbzfJd_dopQJxVtXnwP/view?usp=drive_link',
     category: 'Business & Strategy'
@@ -66,7 +66,7 @@ const certifications: Certification[] = [
   {
     name: 'Brand Management',
     issuer: 'IIM Bangalore',
-    issuerLogo: 'https://www.iimb.ac.in/sites/default/files/inline-images/iimb-logo.png',
+    issuerLogo: 'https://static.wikia.nocookie.net/logopedia/images/9/90/440px-IIM_Bangalore_Logo.svg.png',
     issuerUrl: 'https://www.iimb.ac.in/',
     certificateUrl: 'https://drive.google.com/file/d/16VhOf3xilYQY9RF3vaRb9L95rCwPUTui/view?usp=drive_link',
     category: 'Business & Strategy'
