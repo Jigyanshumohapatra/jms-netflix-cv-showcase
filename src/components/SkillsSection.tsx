@@ -18,21 +18,200 @@ const skills: Skill[] = [
   // Advertising
   { name: 'Google Ads', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg', url: 'https://ads.google.com', category: 'Advertising' },
   { name: 'Meta Ads', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/1599px-Meta_Platforms_Inc._logo.svg.png', url: 'https://www.facebook.com/business/ads', category: 'Advertising' },
-  
+  {
+    name: 'Mailchimp',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Mailchimp_Logo.svg',
+    url: 'https://mailchimp.com',
+    category: 'Advertising'
+  },
+  {
+    name: 'Gallabox',
+    logo: 'https://brandfetch.com/gallabox.com/logo.svg',
+    url: 'https://gallabox.com',
+    category: 'Advertising'
+  },
+  {
+    name: 'Gupshup',
+    logo: 'https://seeklogo.com/images/G/gupshup-logo-442227-seeklogo.com.svg',
+    url: 'https://www.gupshup.io',
+    category: 'Advertising'
+  },
   // Marketing Automation
   { name: 'HubSpot', logo: 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/168_Hubspot_logo_logos-1024.png', url: 'https://hubspot.com', category: 'Marketing Automation' },
   { name: 'Salesforce', logo: 'https://cdn.worldvectorlogo.com/logos/salesforce-2.svg', url: 'https://salesforce.com', category: 'CRM' },
-  { name: 'MoEngage', logo: 'https://www.moengage.com/wp-content/uploads/2021/06/moengage-logo.svg', url: 'https://www.moengage.com', category: 'Marketing Automation' },
-  { name: 'Marketo', logo: 'https://cdn.worldvectorlogo.com/logos/marketo-1.svg', url: 'https://business.adobe.com/products/marketo/marketo.html', category: 'Marketing Automation' },
-  
+  { name: 'MoEngage', logo: 'https://logowik.com/content/uploads/images/moengage8779.jpg', url: 'https://www.moengage.com', category: 'Marketing Automation' },
+  { name: 'Marketo', logo: 'https://www.motiva.ai/wp-content/uploads/2023/01/marketo-an-adobe-company-vector-logo.png', url: 'https://business.adobe.com/products/marketo/marketo.html', category: 'Marketing Automation' },
+  {
+    name: 'Bardeen',
+    logo: 'https://brandfetch.com/bardeen.io/logo.svg',
+    url: 'https://www.bardeen.ai',
+    category: 'Marketing Automation'
+  },
+  {
+    name: 'n8n',
+    logo: 'https://seeklogo.com/images/N/n8n-logo-470809-seeklogo.com.svg',
+    url: 'https://n8n.io',
+    category: 'Marketing Automation'
+  },
+    {
+    name: 'Make (formerly Integromat)',
+    logo: 'https://seeklogo.com/images/M/make-logo-464017-seeklogo.com.svg',
+    url: 'https://www.make.com',
+    category: 'Marketing Automation'
+  },
   // Development & Tools
-  { name: 'Webflow', logo: 'https://cdn.worldvectorlogo.com/logos/webflow-logo.svg', url: 'https://webflow.com', category: 'Development' },
+  { name: 'Webflow', logo: 'https://cdn.freelogovectors.net/wp-content/uploads/2024/03/webflow-logo-freelogovectors.net_.png', url: 'https://webflow.com', category: 'Development' },
   { name: 'Zapier', logo: 'https://cdn.worldvectorlogo.com/logos/zapier.svg', url: 'https://zapier.com', category: 'Automation' },
-  { name: 'GTM', logo: 'https://www.gstatic.com/analytics-suite/header/suite/v2/ic_tag_manager.svg', url: 'https://tagmanager.google.com', category: 'Analytics' },
+  { name: 'GTM', logo: 'https://www.svgrepo.com/show/353827/google-tag-manager.svg', url: 'https://cdn.freelogovectors.net/wp-content/uploads/2024/03/webflow-logo-freelogovectors.net_.png', category: 'Analytics' },
   
   // AI Tools
   { name: 'ChatGPT', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg', url: 'https://chat.openai.com', category: 'AI' },
+    {
+    name: 'Jasper.ai',
+    logo: 'https://seeklogo.com/images/J/jasper-ai-logo-6F5D6D7F4E-seeklogo.com.svg',
+    url: 'https://www.jasper.ai',
+    category: 'AI'
+  },
+  {
+    name: 'Copy.ai',
+    logo: 'https://seeklogo.com/images/C/copy-ai-logo-616579-seeklogo.com.svg',
+    url: 'https://www.copy.ai',
+    category: 'AI'
+  },
+  {
+    name: 'Anyword',
+    logo: 'https://brandfetch.com/anyword.com/logo.svg',
+    url: 'https://anyword.com',
+    category: 'AI'
+  },
+  {
+    name: 'Surfer SEO',
+    logo: 'https://surferseo.com/assets/img/logo.svg',
+    url: 'https://surferseo.com',
+    category: 'AI'
+  },
+  {
+    name: 'Midjourney',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Midjourney_Emblem.svg',
+    url: 'https://www.midjourney.com',
+    category: 'AI'
+  },
+  {
+    name: 'DALL·E',
+    logo: 'https://commons.wikimedia.org/wiki/File:DALL-E_2_Signature.svg',
+    url: 'https://openai.com/dall-e',
+    category: 'AI'
+  },
+  {
+    name: 'Runway',
+    logo: 'https://seeklogo.com/images/R/runway-logo-496519-seeklogo.com.svg',
+    url: 'https://runwayml.com',
+    category: 'AI'
+  },
+  {
+    name: 'Pika',
+    logo: 'https://seeklogo.com/images/P/pika-logo-47E7D0E0E7-seeklogo.com.svg',
+    url: 'https://pika.art',
+    category: 'AI'
+  },
+  {
+    name: 'Descript',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Descript_Logo.svg',
+    url: 'https://www.descript.com',
+    category: 'AI'
+  },
+  {
+    name: 'Apollo.io',
+    logo: 'https://seeklogo.com/images/A/apollo-io-logo-4D6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.apollo.io',
+    category: 'AI'
+  },
+  {
+    name: 'Clay',
+    logo: 'https://seeklogo.com/images/C/clay-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.clay.com',
+    category: 'AI'
+  },
+  {
+    name: 'Cognism',
+    logo: 'https://seeklogo.com/images/C/cognism-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.cognism.com',
+    category: 'AI'
+  },
+  {
+    name: 'Lusha',
+    logo: 'https://seeklogo.com/images/L/lusha-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.lusha.com',
+    category: 'AI'
+  },
+  {
+    name: 'Lavender.ai',
+    logo: 'https://seeklogo.com/images/L/lavender-ai-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.lavender.ai',
+    category: 'AI'
+  },
+  {
+    name: 'Perplexity AI',
+    logo: 'https://seeklogo.com/images/P/perplexity-ai-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.perplexity.ai',
+    category: 'AI'
+  },
+  {
+    name: 'ChatGPT',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg',
+    url: 'https://chat.openai.com',
+    category: 'AI'
+  },
+  {
+    name: 'Claude',
+    logo: 'https://seeklogo.com/images/C/claude-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://claude.ai',
+    category: 'AI'
+  },
+  {
+    name: 'Napkin',
+    logo: 'https://seeklogo.com/images/N/napkin-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://napkin.one',
+    category: 'AI'
+  },
+  {
+    name: 'Clarity',
+    logo: 'https://seeklogo.com/images/C/clarity-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.clarity.so',
+    category: 'AI'
+  },
+  {
+    name: 'Fermat',
+    logo: 'https://seeklogo.com/images/F/fermat-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.fermat.ws',
+    category: 'AI'
+  },
+  {
+    name: 'Mutiny',
+    logo: 'https://seeklogo.com/images/M/mutiny-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.mutinyhq.com',
+    category: 'AI'
+  },
+  {
+    name: 'Replo',
+    logo: 'https://seeklogo.com/images/R/replo-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.replo.app',
+    category: 'AI'
+  },
+  {
+    name: 'Marktag',
+    logo: 'https://seeklogo.com/images/M/marktag-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://www.marktag.io',
+    category: 'AI'
+  },
+  {
+    name: 'Novacene',
+    logo: 'https://seeklogo.com/images/N/novacene-logo-6F6F6F6F6F-seeklogo.com.svg',
+    url: 'https://novacene.ai',
+    category: 'AI'
+  },
   { name: 'Notion', logo: 'https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg', url: 'https://notion.so', category: 'Productivity' },
+  
 ];
 
 const categories = ['All', 'Analytics', 'Advertising', 'Marketing Automation', 'CRM', 'Development', 'Automation', 'AI', 'Productivity'];
