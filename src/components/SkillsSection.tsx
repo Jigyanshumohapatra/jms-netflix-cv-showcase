@@ -17,7 +17,7 @@ const skills: Skill[] = [
   
   // Advertising
   { name: 'Google Ads', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg', url: 'https://ads.google.com', category: 'Advertising' },
-  { name: 'Meta Ads', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Facebook_Logo_%282019%29.svg', url: 'https://www.facebook.com/business/ads', category: 'Advertising' },
+  { name: 'Meta Ads', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/1599px-Meta_Platforms_Inc._logo.svg.png', url: 'https://www.facebook.com/business/ads', category: 'Advertising' },
   
   // Marketing Automation
   { name: 'HubSpot', logo: 'https://cdn.worldvectorlogo.com/logos/hubspot-2.svg', url: 'https://hubspot.com', category: 'Marketing Automation' },
