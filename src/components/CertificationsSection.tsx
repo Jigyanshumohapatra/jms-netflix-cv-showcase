@@ -16,7 +16,7 @@ const certifications: Certification[] = [
   {
     name: 'Google Ads Masterclass',
     issuer: 'Digital Deepak',
-    issuerLogo: 'https://digitaldeepak.com/wp-content/uploads/2021/01/cropped-favicon-32x32.png',
+    issuerLogo: 'https://www.dellaleaders.com/v3/wp-content/uploads/2021/09/Profile-picture-1.png',
     issuerUrl: 'https://digitaldeepak.com/',
     certificateUrl: 'https://drive.google.com/file/d/1K323FYq85gT6lUlfF-b131G4W-VHFFAX/view?usp=drive_link',
     category: 'Marketing & Growth'
@@ -24,7 +24,7 @@ const certifications: Certification[] = [
   {
     name: 'Email Marketing Strategy',
     issuer: 'BitDegree',
-    issuerLogo: 'https://assets.bitdegree.org/online-learning-platforms/storage/media/2018/11/BitDegree-logo.png',
+    issuerLogo: 'https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/bitdegree/original.jpg',
     issuerUrl: 'https://www.bitdegree.org/',
     certificateUrl: 'https://drive.google.com/file/d/1LZx0XJZKh45rKn3nreQxLc2DGeGGyh7l/view?usp=drive_link',
     category: 'Marketing & Growth'
@@ -32,7 +32,7 @@ const certifications: Certification[] = [
   {
     name: 'Instagram Marketing Course',
     issuer: 'BitDegree',
-    issuerLogo: 'https://assets.bitdegree.org/online-learning-platforms/storage/media/2018/11/BitDegree-logo.png',
+    issuerLogo: 'https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/bitdegree/original.jpg',
     issuerUrl: 'https://www.bitdegree.org/',
     certificateUrl: 'https://drive.google.com/file/d/1XdKw1iHRba4_ce6CUuaJ-KrLtWmdg_-I/view?usp=drive_link',
     category: 'Marketing & Growth'
@@ -40,7 +40,7 @@ const certifications: Certification[] = [
   {
     name: 'MoEngage Growth Marketing Expert',
     issuer: 'MoEngage',
-    issuerLogo: 'https://www.moengage.com/wp-content/uploads/2021/06/moengage-logo.svg',
+    issuerLogo: 'https://appexchange.salesforce.com/image_host/ed4eccc0-3509-4224-812e-a2960f573459.png',
     issuerUrl: 'https://www.moengage.com/',
     certificateUrl: 'https://drive.google.com/file/d/11EHy6-5fnKPStQNcDsoqBmP77ShjsMSG/view?usp=sharing',
     category: 'Marketing & Growth'
@@ -76,14 +76,14 @@ const certifications: Certification[] = [
   {
     name: 'Webflow: Website Development',
     issuer: 'Webflow University',
-    issuerLogo: 'https://cdn.worldvectorlogo.com/logos/webflow-logo.svg',
+    issuerLogo: 'https://w7.pngwing.com/pngs/266/755/png-transparent-webflow-blue-w-logo-icon-tech-companies-thumbnail.png',
     issuerUrl: 'https://university.webflow.com/',
     category: 'Web & Development'
   },
   {
     name: 'Bootstrap and PHP Blog Tutorial',
     issuer: 'BitDegree',
-    issuerLogo: 'https://assets.bitdegree.org/online-learning-platforms/storage/media/2018/11/BitDegree-logo.png',
+    issuerLogo: 'https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/bitdegree/original.jpg',
     issuerUrl: 'https://www.bitdegree.org/',
     certificateUrl: 'https://drive.google.com/file/d/1PKnaWj42P7frfr2pLhgc5f21e9bluKp4/view?usp=drive_link',
     category: 'Web & Development'
@@ -93,7 +93,7 @@ const certifications: Certification[] = [
   {
     name: 'ISCP (Information Security Certified Professional)',
     issuer: 'ISCP',
-    issuerLogo: 'https://via.placeholder.com/64x64?text=ISCP',
+    issuerLogo: 'https://startupsuccessstories.in/wp-content/uploads/2023/01/Kraftshala-Logo.png',
     issuerUrl: '#',
     certificateUrl: 'https://drive.google.com/file/d/1e_Fl2AdY24KwJ21vPakFPQuhZda1APpF/view?usp=drive_link',
     category: 'Cybersecurity'
@@ -101,7 +101,7 @@ const certifications: Certification[] = [
   {
     name: 'Web & Network Security',
     issuer: 'IEEE CS Kerala',
-    issuerLogo: 'https://ieeekerala.org/images/ieee-kerala-logo.png',
+    issuerLogo: 'https://ieeekerala.org/wp-content/uploads/2024/05/cropped-sectionLogoBlue.png',
     issuerUrl: 'https://ieeekerala.org/',
     certificateUrl: 'https://drive.google.com/file/d/1FFXlH-Pz3Z8vfdPh7_yUiOy3NaWDVk_k/view?usp=drive_link',
     category: 'Cybersecurity'
@@ -111,7 +111,7 @@ const certifications: Certification[] = [
   {
     name: 'C++ Programming',
     issuer: 'Coursera',
-    issuerLogo: 'https://cdn.worldvectorlogo.com/logos/coursera-logo.svg',
+    issuerLogo: 'https://about.coursera.org/static/blueCoursera-646f855eae3d677239ea9db93d6c9e17.svg',
     issuerUrl: 'https://www.coursera.org/',
     certificateUrl: 'https://drive.google.com/file/d/1Hagm_TCt8tmm9FbAxUaUK4EZbDG1B4Uv/view?usp=drive_link',
     category: 'Programming'
