@@ -10,7 +10,7 @@ interface Skill {
 
 const skills: Skill[] = [
   // Analytics & Data
-  { name: 'Google Analytics', logo: 'https://upload.wikimedia.org/wikipedia/commons/7/77/GAnalytics.png', url: 'https://marketingplatform.google.com/about/analytics/', category: 'Analytics' },
+  { name: 'Google Analytics', logo: 'https://www.vectorlogo.zone/logos/google_analytics/google_analytics-ar21.svg', url: 'https://marketingplatform.google.com/about/analytics/', category: 'Analytics' },
   { name: 'Mixpanel', logo: 'https://cdn.worldvectorlogo.com/logos/mixpanel-2.svg', url: 'https://mixpanel.com', category: 'Analytics' },
   { name: 'Amplitude', logo: 'https://cdn.worldvectorlogo.com/logos/amplitude-1.svg', url: 'https://amplitude.com', category: 'Analytics' },
   { name: 'Hotjar', logo: 'https://cdn.worldvectorlogo.com/logos/hotjar-1.svg', url: 'https://hotjar.com', category: 'Analytics' },
