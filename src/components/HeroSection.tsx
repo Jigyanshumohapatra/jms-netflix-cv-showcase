@@ -29,7 +29,7 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
           style={{ filter: 'brightness(0.4)' }}
         >
-          <source src="https://motionarray.imgix.net/preview-1622637-7TQ8W1RLLRJuUJAK-large.mp4" type="video/mp4" />
+          <source src="https://motionarray.imgix.net/preview-1622637-7TQ8W1RLLJuUJAK-large.mp4" type="video/mp4" />
           {/* Fallback gradient background if video fails to load */}
         </video>
         
@@ -89,20 +89,29 @@ const HeroSection = () => {
               Contact Me
             </button>
           </div>
-          
-          {/* Sound Toggle */}
-          <button
-            onClick={toggleMute}
-            className="absolute top-6 right-6 p-3 bg-black/50 rounded-full hover:bg-black/70 transition-all duration-300 backdrop-blur-sm"
-            title={isMuted ? "Unmute video" : "Mute video"}
-          >
-            {isMuted ? <VolumeX className="w-6 h-6" /> : <Volume2 className="w-6 h-6" />}
-          </button>
         </div>
       </div>
       
+      {/* Sound Toggle Button - Bottom Right */}
+      <button
+        onClick={toggleMute}
+        className="absolute bottom-6 right-6 p-4 bg-black/60 rounded-full hover:bg-black/80 transition-all duration-300 backdrop-blur-sm border border-white/20 group z-20"
+        title={isMuted ? "Unmute video" : "Mute video"}
+      >
+        {isMuted ? (
+          <VolumeX className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
+        ) : (
+          <Volume2 className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
+        )}
+        
+        {/* Tooltip */}
+        <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-black/80 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+          {isMuted ? "Unmute" : "Mute"}
+        </div>
+      </button>
+      
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
