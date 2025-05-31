@@ -164,7 +164,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Claude',
-    logo: 'https://seeklogo.com/images/C/claude-logo-6F6F6F6F6F-seeklogo.com.svg',
+    logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude-color.png',
     url: 'https://claude.ai',
     category: 'AI'
   },
@@ -192,7 +192,7 @@ const skills: Skill[] = [
     url: 'https://novacene.ai',
     category: 'AI'
   },
-  { name: 'Notion', logo: 'https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg', url: 'https://notion.so', category: 'Productivity' },
+  { name: 'Notion', logo: 'https://img.icons8.com/ios7/512/notion.png', url: 'https://notion.so', category: 'Productivity' },
   
 ];
 
