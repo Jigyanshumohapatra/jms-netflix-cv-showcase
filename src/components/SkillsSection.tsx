@@ -26,13 +26,13 @@ const skills: Skill[] = [
   },
   {
     name: 'Gallabox',
-    logo: 'https://gallabox.com/gallabox-logo.svg',
+    logo: 'https://cdn.brandfetch.io/gallabox.com/fallback/lettermark/theme/dark/h/256/w/256/icon?c=1bfwsmEH20zzEfSNTed',
     url: 'https://gallabox.com',
     category: 'Advertising'
   },
   {
     name: 'Gupshup',
-    logo: 'https://cdn.brandfetch.io/gallabox.com/fallback/lettermark/theme/dark/h/256/w/256/icon?c=1bfwsmEH20zzEfSNTed',
+    logo: 'https://companieslogo.com/img/orig/gupshup-1d75e54c.png?t=1720244494',
     url: 'https://www.gupshup.io',
     category: 'Advertising'
   },
