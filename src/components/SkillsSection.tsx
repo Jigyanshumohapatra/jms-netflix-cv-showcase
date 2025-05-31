@@ -104,7 +104,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Runway',
-    logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/runway-text.png',
+    logo: 'https://img.icons8.com/fluent/512/runway_app.png',
     url: 'https://runwayml.com',
     category: 'AI'
   },
