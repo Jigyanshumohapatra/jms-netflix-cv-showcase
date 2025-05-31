@@ -187,12 +187,6 @@ const skills: Skill[] = [
     category: 'AI'
   },
   {
-    name: 'Replo',
-    logo: 'https://seeklogo.com/images/R/replo-logo-6F6F6F6F6F-seeklogo.com.svg',
-    url: 'https://cdn.prod.website-files.com/6684f670fdeb125226508165/66892d24a1df556c172b06eb_Replo%20LOGO.svg',
-    category: 'AI'
-  },
-  {
     name: 'Novacene',
     logo: 'https://novacene.ai/wp-content/uploads/2024/09/novacene_logo.png',
     url: 'https://novacene.ai',
