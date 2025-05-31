@@ -55,12 +55,12 @@ const skills: Skill[] = [
   },
     {
     name: 'Make (formerly Integromat)',
-    logo: 'https://cdn.freelogovectors.net/wp-content/uploads/2023/11/make-logo-freelogovectors.net_.png',
+    logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/make-color.png',
     url: 'https://www.make.com',
     category: 'Marketing Automation'
   },
   // Development & Tools
-  { name: 'Webflow', logo: 'https://cdn.freelogovectors.net/wp-content/uploads/2024/03/webflow-logo-freelogovectors.net_.png', url: 'https://webflow.com', category: 'Development' },
+  { name: 'Webflow', logo: 'https://logowik.com/content/uploads/images/t_webflow-letter-w-icon9712.logowik.com.webp', url: 'https://webflow.com', category: 'Development' },
   { name: 'Zapier', logo: 'https://cdn.worldvectorlogo.com/logos/zapier.svg', url: 'https://zapier.com', category: 'Automation' },
   { name: 'GTM', logo: 'https://www.svgrepo.com/show/353827/google-tag-manager.svg', url: 'https://cdn.freelogovectors.net/wp-content/uploads/2024/03/webflow-logo-freelogovectors.net_.png', category: 'Analytics' },
   
@@ -80,7 +80,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Anyword',
-    logo: 'https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/65ae548143e3b5eca08c4093_Logo.svg',
+    logo: 'https://images.saasworthy.com/anyword_29464_logo_1639373751_yiucx.jpg',
     url: 'https://anyword.com',
     category: 'AI'
   },
@@ -116,7 +116,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Descript',
-    logo: 'https://descript-website.vercel.app/images/descript-logo.svg',
+    logo: 'https://w7.pngwing.com/pngs/654/1005/png-transparent-descript-app-logo-tech-companies-thumbnail.png',
     url: 'https://www.descript.com',
     category: 'AI'
   },
@@ -188,7 +188,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Novacene',
-    logo: 'https://novacene.ai/wp-content/uploads/2024/09/novacene_logo.png',
+    logo: 'https://cdn.prod.website-files.com/640b2e288e3d220d8df027bb/64885dabb39afed29bd308f8_Open-graph%20image%20striped.png',
     url: 'https://novacene.ai',
     category: 'AI'
   },
