@@ -28,10 +28,21 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="bg-netflix-red hover:bg-red-700 text-white px-8 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2">
-              <Download className="w-5 h-5" />
-              Download CV
-            </button>
+            <button
+               onClick={() => {
+               const link = document.createElement('a');
+               link.href = "https://docs.google.com/document/d/1VTE5A8nGhrh_PodMNd7DmtvsT1cFfS6b2_ri0Wm9lIo/export?format=pdf";
+               link.download = "Jigyanshu_Mohapatra_CV.pdf"; // Note: May not force download due to cross-origin rules
+               link.target = "_blank"; // opens in new tab
+               document.body.appendChild(link);
+               link.click();
+               document.body.removeChild(link);
+                }}
+               className="bg-netflix-red hover:bg-red-700 text-white px-8 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
+            >
+            <Download className="w-5 h-5" />
+             Download CV
+           </button>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-netflix-dark px-8 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
