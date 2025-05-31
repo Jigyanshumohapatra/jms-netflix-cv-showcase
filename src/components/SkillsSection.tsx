@@ -11,13 +11,13 @@ interface Skill {
 const skills: Skill[] = [
   // Analytics & Data
   { name: 'Google Analytics', logo: 'https://www.vectorlogo.zone/logos/google_analytics/google_analytics-ar21.svg', url: 'https://marketingplatform.google.com/about/analytics/', category: 'Analytics' },
-  { name: 'Mixpanel', logo: 'https://cdn.worldvectorlogo.com/logos/mixpanel.svg', category: 'Analytics' },
+  { name: 'Mixpanel', logo: 'https://e7.pngegg.com/pngimages/244/849/png-clipart-mixpanel-white-logo-tech-companies.png', category: 'Analytics' },
   { name: 'Amplitude', logo: 'https://images.seeklogo.com/logo-png/42/1/amplitude-logo-png_seeklogo-428041.png', url: 'https://amplitude.com', category: 'Analytics' },
   { name: 'Hotjar', logo: 'https://logowik.com/content/uploads/images/hotjar-new-20214667.jpg', url: 'https://hotjar.com', category: 'Analytics' },
   
   // Advertising
   { name: 'Google Ads', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg', url: 'https://ads.google.com', category: 'Advertising' },
-  { name: 'Meta Ads', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/1599px-Meta_Platforms_Inc._logo.svg.png', url: 'https://www.facebook.com/business/ads', category: 'Advertising' },
+  { name: 'Meta Ads', logo: 'https://static.vecteezy.com/system/resources/previews/004/201/564/non_2x/meta-social-network-emblem-blue-stylish-letter-m-or-mobius-band-vector.jpg', url: 'https://www.facebook.com/business/ads', category: 'Advertising' },
   {
     name: 'Mailchimp',
     logo: 'https://www.svgrepo.com/show/452053/mailchimp.svg',
@@ -32,7 +32,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Gupshup',
-    logo: 'https://ik.imagekit.io/gupshup/revamp/assets/v3/images/ogp.jpg',
+    logo: 'https://cdn.brandfetch.io/gallabox.com/fallback/lettermark/theme/dark/h/256/w/256/icon?c=1bfwsmEH20zzEfSNTed',
     url: 'https://www.gupshup.io',
     category: 'Advertising'
   },
