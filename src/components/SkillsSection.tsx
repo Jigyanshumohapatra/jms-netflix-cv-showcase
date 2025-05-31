@@ -20,7 +20,7 @@ const skills: Skill[] = [
   { name: 'Meta Ads', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/1599px-Meta_Platforms_Inc._logo.svg.png', url: 'https://www.facebook.com/business/ads', category: 'Advertising' },
   
   // Marketing Automation
-  { name: 'HubSpot', logo: 'https://cdn.worldvectorlogo.com/logos/hubspot-2.svg', url: 'https://hubspot.com', category: 'Marketing Automation' },
+  { name: 'HubSpot', logo: 'https://brandfetch.com/hubs.ly?view=library&library=default&collection=logos&asset=idUw_2QApK&utm_source=https%253A%252F%252Fbrandfetch.com%252Fhubs.ly', url: 'https://hubspot.com', category: 'Marketing Automation' },
   { name: 'Salesforce', logo: 'https://cdn.worldvectorlogo.com/logos/salesforce-2.svg', url: 'https://salesforce.com', category: 'CRM' },
   { name: 'MoEngage', logo: 'https://www.moengage.com/wp-content/uploads/2021/06/moengage-logo.svg', url: 'https://www.moengage.com', category: 'Marketing Automation' },
   { name: 'Marketo', logo: 'https://cdn.worldvectorlogo.com/logos/marketo-1.svg', url: 'https://business.adobe.com/products/marketo/marketo.html', category: 'Marketing Automation' },
