@@ -16,7 +16,7 @@ const education: Education[] = [
     degree: 'Bachelor of Technology in Computer Science Engineering',
     year: '2020',
     location: 'Punjab, India',
-    logo: 'https://www.lpu.in/images/logo.png',
+    logo: 'https://www.figma.com/community/resource/d69a0c3b-c6bb-4907-aae0-46ee190d0db7/thumbnail.png',
     website: 'https://www.lpu.in/'
   },
   {
