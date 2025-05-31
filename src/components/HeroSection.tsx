@@ -44,10 +44,12 @@ const HeroSection = () => {
              Download CV
            </button>
             <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-netflix-dark px-8 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
-            >
-              <Mail className="w-5 h-5" />
+              onClick={() => {
+                window.open("https://wa.link/tbhda7", "_blank");
+                }}
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-netflix-dark px-8 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
+                >
+            <Mail className="w-5 h-5" />
               Contact Me
             </button>
           </div>
