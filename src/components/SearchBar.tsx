@@ -1,18 +1,18 @@
 
-import React, { useState, useEffect } from 'react';
-import { Search, X, ChevronUp, ChevronDown } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Search, ArrowUp, ArrowDown, X } from 'lucide-react';
 
 interface SearchBarProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ searchQuery, setSearchQuery }) => {
+const SearchBar = ({ searchQuery, setSearchQuery }: SearchBarProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [matches, setMatches] = useState<Element[]>([]);
   const [currentMatchIndex, setCurrentMatchIndex] = useState(0);
-  const [highlightedElements, setHighlightedElements] = useState<Element[]>([]);
 
+  // Show search bar when scrolling
   useEffect(() => {
     const handleScroll = () => {
       setIsVisible(window.scrollY > 100);
@@ -22,172 +22,191 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchQuery, setSearchQuery }) =>
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const removeHighlights = () => {
-    highlightedElements.forEach(element => {
-      const parent = element.parentNode;
-      if (parent) {
-        parent.replaceChild(document.createTextNode(element.textContent || ''), element);
-        parent.normalize();
-      }
-    });
-    setHighlightedElements([]);
-  };
-
-  const highlightMatches = (query: string) => {
-    if (!query.trim()) {
-      removeHighlights();
+  // Search functionality
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      // Clear highlights
+      document.querySelectorAll('.search-highlight').forEach(el => {
+        const parent = el.parentNode;
+        if (parent) {
+          parent.replaceChild(document.createTextNode(el.textContent || ''), el);
+          parent.normalize();
+        }
+      });
       setMatches([]);
+      setCurrentMatchIndex(0);
       return;
     }
 
-    removeHighlights();
+    // Remove existing highlights
+    document.querySelectorAll('.search-highlight').forEach(el => {
+      const parent = el.parentNode;
+      if (parent) {
+        parent.replaceChild(document.createTextNode(el.textContent || ''), el);
+        parent.normalize();
+      }
+    });
 
+    // Find and highlight matches
     const walker = document.createTreeWalker(
       document.body,
       NodeFilter.SHOW_TEXT,
       {
         acceptNode: (node) => {
-          if (node.nodeValue && node.nodeValue.toLowerCase().includes(query.toLowerCase())) {
-            return NodeFilter.FILTER_ACCEPT;
+          const parent = node.parentElement;
+          if (!parent) return NodeFilter.FILTER_REJECT;
+          
+          const excludedTags = ['SCRIPT', 'STYLE', 'INPUT', 'TEXTAREA'];
+          if (excludedTags.includes(parent.tagName)) {
+            return NodeFilter.FILTER_REJECT;
           }
-          return NodeFilter.FILTER_REJECT;
+          
+          if (parent.closest('.search-bar-container')) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          
+          return node.textContent && node.textContent.toLowerCase().includes(searchQuery.toLowerCase())
+            ? NodeFilter.FILTER_ACCEPT 
+            : NodeFilter.FILTER_REJECT;
         }
       }
     );
 
-    const textNodes: Node[] = [];
+    const matchingNodes: Node[] = [];
     let node;
-    while ((node = walker.nextNode())) {
-      textNodes.push(node);
+    while (node = walker.nextNode()) {
+      matchingNodes.push(node);
     }
 
-    const newHighlightedElements: Element[] = [];
     const newMatches: Element[] = [];
+    matchingNodes.forEach(textNode => {
+      const text = textNode.textContent || '';
+      const parent = textNode.parentElement;
+      if (!parent) return;
 
-    textNodes.forEach(textNode => {
-      const text = textNode.nodeValue || '';
-      const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      const regex = new RegExp(`(${searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      const parts = text.split(regex);
       
-      if (regex.test(text)) {
-        const highlightedHTML = text.replace(regex, '<mark class="search-highlight">$1</mark>');
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = highlightedHTML;
-        
-        const parent = textNode.parentNode;
-        if (parent) {
-          const fragment = document.createDocumentFragment();
-          Array.from(tempDiv.childNodes).forEach(child => {
-            if (child.nodeType === Node.ELEMENT_NODE && (child as Element).tagName === 'MARK') {
-              newHighlightedElements.push(child as Element);
-              newMatches.push(child as Element);
-            }
-            fragment.appendChild(child.cloneNode(true));
-          });
-          parent.replaceChild(fragment, textNode);
+      const fragment = document.createDocumentFragment();
+      parts.forEach((part, index) => {
+        if (index % 2 === 0) {
+          fragment.appendChild(document.createTextNode(part));
+        } else {
+          const highlight = document.createElement('span');
+          highlight.className = 'search-highlight';
+          highlight.textContent = part;
+          fragment.appendChild(highlight);
+          newMatches.push(highlight);
         }
-      }
+      });
+      
+      parent.replaceChild(fragment, textNode);
     });
 
-    setHighlightedElements(newHighlightedElements);
     setMatches(newMatches);
     setCurrentMatchIndex(0);
-  };
+  }, [searchQuery]);
 
   const scrollToMatch = (index: number) => {
-    if (matches[index]) {
-      matches[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setCurrentMatchIndex(index);
-    }
+    if (matches.length === 0) return;
+    
+    const match = matches[index];
+    match.scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'center',
+      inline: 'center'
+    });
+    
+    // Highlight current match
+    matches.forEach((m, i) => {
+      m.style.backgroundColor = i === index ? '#EF4444' : '#FACC15';
+    });
   };
 
-  const handleSearch = (query: string) => {
-    setSearchQuery(query);
-    highlightMatches(query);
+  const handleNext = () => {
+    if (matches.length === 0) return;
+    const nextIndex = (currentMatchIndex + 1) % matches.length;
+    setCurrentMatchIndex(nextIndex);
+    scrollToMatch(nextIndex);
   };
 
-  const goToFirstMatch = () => {
+  const handlePrevious = () => {
+    if (matches.length === 0) return;
+    const prevIndex = (currentMatchIndex - 1 + matches.length) % matches.length;
+    setCurrentMatchIndex(prevIndex);
+    scrollToMatch(prevIndex);
+  };
+
+  const handleOk = () => {
     if (matches.length > 0) {
-      scrollToMatch(0);
+      scrollToMatch(currentMatchIndex);
     }
   };
 
-  const goToNextMatch = () => {
-    if (matches.length > 0) {
-      const nextIndex = (currentMatchIndex + 1) % matches.length;
-      scrollToMatch(nextIndex);
-    }
-  };
-
-  const goToPreviousMatch = () => {
-    if (matches.length > 0) {
-      const prevIndex = currentMatchIndex === 0 ? matches.length - 1 : currentMatchIndex - 1;
-      scrollToMatch(prevIndex);
-    }
+  const clearSearch = () => {
+    setSearchQuery('');
+    document.querySelectorAll('.search-highlight').forEach(el => {
+      const parent = el.parentNode;
+      if (parent) {
+        parent.replaceChild(document.createTextNode(el.textContent || ''), el);
+        parent.normalize();
+      }
+    });
   };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-20 right-4 z-50 glass-effect rounded-lg p-4 max-w-sm w-full mx-4 md:mx-0">
+    <div className="search-bar-container fixed top-20 right-4 z-50 glass-effect rounded-lg p-4 min-w-80">
       <div className="flex items-center gap-2 mb-3">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
           <input
             type="text"
             value={searchQuery}
-            onChange={(e) => handleSearch(e.target.value)}
-            placeholder="Search content..."
-            className="w-full pl-10 pr-4 py-2 bg-netflix-darker border border-netflix-light-gray rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-netflix-red"
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search CV content..."
+            className="w-full pl-10 pr-4 py-2 bg-netflix-dark border border-netflix-light-gray rounded-md text-white text-sm focus:outline-none focus:border-netflix-red"
           />
         </div>
         <button
-          onClick={() => {
-            setSearchQuery('');
-            removeHighlights();
-            setMatches([]);
-          }}
-          className="p-2 hover:bg-netflix-red rounded-md transition-colors"
+          onClick={clearSearch}
+          className="p-2 text-gray-400 hover:text-white transition-colors duration-300"
         >
           <X className="w-4 h-4" />
         </button>
       </div>
-
+      
       {searchQuery && (
-        <div className="space-y-2">
-          <div className="flex items-center justify-between text-sm text-gray-300">
-            <span>
-              {matches.length === 0 
-                ? 'No matches found' 
-                : `${currentMatchIndex + 1} of ${matches.length} matches`
-              }
-            </span>
-            {matches.length > 0 && (
-              <div className="flex gap-1">
-                <button
-                  onClick={goToPreviousMatch}
-                  className="p-1 hover:bg-netflix-red rounded transition-colors"
-                  title="Previous match"
-                >
-                  <ChevronUp className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={goToNextMatch}
-                  className="p-1 hover:bg-netflix-red rounded transition-colors"
-                  title="Next match"
-                >
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </div>
-            )}
-          </div>
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-gray-300">
+            {matches.length === 0 
+              ? 'No matches found' 
+              : `${currentMatchIndex + 1} of ${matches.length} matches`
+            }
+          </span>
           
           {matches.length > 0 && (
-            <button
-              onClick={goToFirstMatch}
-              className="w-full py-2 px-3 bg-netflix-red hover:bg-red-700 text-white rounded-md text-sm font-medium transition-colors"
-            >
-              Go to First Match
-            </button>
+            <div className="flex gap-1">
+              <button
+                onClick={handleOk}
+                className="px-3 py-1 bg-netflix-red hover:bg-red-700 text-white text-xs rounded transition-colors duration-300"
+              >
+                OK
+              </button>
+              <button
+                onClick={handlePrevious}
+                className="p-1 bg-netflix-gray hover:bg-netflix-light-gray text-white rounded transition-colors duration-300"
+              >
+                <ArrowUp className="w-3 h-3" />
+              </button>
+              <button
+                onClick={handleNext}
+                className="p-1 bg-netflix-gray hover:bg-netflix-light-gray text-white rounded transition-colors duration-300"
+              >
+                <ArrowDown className="w-3 h-3" />
+              </button>
+            </div>
           )}
         </div>
       )}
