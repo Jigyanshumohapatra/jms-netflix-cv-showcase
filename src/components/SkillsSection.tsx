@@ -32,7 +32,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Gupshup',
-    logo: 'https://gs-upload.gupshup.io/revamp/assets/v3/images/new-home-page/logo-gupshup.svg',
+    logo: 'https://ik.imagekit.io/gupshup/revamp/assets/v3/images/ogp.jpg',
     url: 'https://www.gupshup.io',
     category: 'Advertising'
   },
@@ -68,13 +68,13 @@ const skills: Skill[] = [
   { name: 'ChatGPT', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg', url: 'https://chat.openai.com', category: 'AI' },
     {
     name: 'Jasper.ai',
-    logo: 'https://cdn.prod.website-files.com/60e5f2de011b86acebc30db7/665dd9c1792c38c09c7d74ec_Jasper%20Logo%20Lockup%20-%20Dark%20Khaki.svg',
+    logo: 'https://boost.space/wp-content/uploads/2024/11/jasper-ai.png',
     url: 'https://www.jasper.ai',
     category: 'AI'
   },
   {
     name: 'Copy.ai',
-    logo: 'https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/6797ee68ae7908e605a9a4d0_copy_logo-all-dark.svg',
+    logo: 'https://www.payperword.com/learn/images/CopyAi-whiteout.png',
     url: 'https://www.copy.ai',
     category: 'AI'
   },
@@ -140,7 +140,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Lusha',
-    logo: 'https://www.lusha.com/wp-content/uploads/2020/06/logo.svg',
+    logo: 'https://assets.softr-files.com/applications/910d5e3a-8731-409a-a0a9-abfb43c80cf8/assets/c81751c1-8401-43e6-bf0a-7a7cc84ac9a5.png',
     url: 'https://www.lusha.com',
     category: 'AI'
   },
@@ -170,7 +170,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Napkin',
-    logo: 'https://lh3.googleusercontent.com/0dXCJ6DitVnjSV7poSi_bCsGL6kOzNe7aqTqYE1uvIO1NZe2c-kuqJ8AaM1a7gVoVJCwOWDt8tX0BIUcRwQtAxvtmV5NWKG6dRg=w1064',
+    logo: 'https://media.licdn.com/dms/image/v2/D560BAQEYfmQKrdByPg/company-logo_200_200/company-logo_200_200/0/1723039432148/napkin_ai_logo?e=2147483647&v=beta&t=Nsr22RG3uiy9usBNh55leGVf8ES5YJQwUANW-2N7yEA',
     url: 'https://napkin.one',
     category: 'AI'
   },
