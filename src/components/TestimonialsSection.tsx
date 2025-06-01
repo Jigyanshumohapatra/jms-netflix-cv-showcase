@@ -40,6 +40,7 @@ const testimonials: Testimonial[] = [
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
 
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -47,6 +48,14 @@ const TestimonialsSection = () => {
 
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const handleImageError = (index: number) => {
+    setImageErrors(prev => new Set([...prev, index]));
+  };
+
+  const getAvatarFallback = (name: string) => {
+    return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
   };
 
   return (
@@ -66,11 +75,19 @@ const TestimonialsSection = () => {
               <div key={index} className="w-full flex-shrink-0 px-4">
                 <div className="netflix-card p-8 text-center">
                   <div className="mb-6">
-                    <img 
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
-                    />
+                    {imageErrors.has(index) ? (
+                      <div className="w-20 h-20 rounded-full mx-auto mb-4 bg-netflix-red flex items-center justify-center text-white font-bold text-lg">
+                        {getAvatarFallback(testimonial.name)}
+                      </div>
+                    ) : (
+                      <img 
+                        src={testimonial.avatar}
+                        alt={`${testimonial.name} profile picture`}
+                        className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+                        onError={() => handleImageError(index)}
+                        loading="lazy"
+                      />
+                    )}
                     <h3 className="text-xl font-bold text-white mb-1">{testimonial.name}</h3>
                     <p className="text-netflix-red font-semibold mb-1">{testimonial.role}</p>
                     <p className="text-gray-400">{testimonial.company}</p>
@@ -101,6 +118,7 @@ const TestimonialsSection = () => {
         <button
           onClick={prevTestimonial}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-netflix-red hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
+          aria-label="Previous testimonial"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
@@ -108,6 +126,7 @@ const TestimonialsSection = () => {
         <button
           onClick={nextTestimonial}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-netflix-red hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
+          aria-label="Next testimonial"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
@@ -121,6 +140,7 @@ const TestimonialsSection = () => {
               className={`w-3 h-3 rounded-full transition-colors duration-300 ${
                 index === currentIndex ? 'bg-netflix-red' : 'bg-gray-600'
               }`}
+              aria-label={`Go to testimonial ${index + 1}`}
             />
           ))}
         </div>

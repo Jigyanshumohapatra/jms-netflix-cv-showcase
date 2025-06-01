@@ -33,8 +33,24 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchQuery, setSearchQuery }) =>
     setHighlightedElements([]);
   };
 
+  const createHighlightElement = (text: string): HTMLElement => {
+    const mark = document.createElement('mark');
+    mark.className = 'search-highlight';
+    mark.textContent = text;
+    return mark;
+  };
+
   const highlightMatches = (query: string) => {
-    if (!query.trim()) {
+    // Input validation - limit query length and sanitize
+    if (!query.trim() || query.length > 100) {
+      removeHighlights();
+      setMatches([]);
+      return;
+    }
+
+    // Sanitize query - only allow alphanumeric, spaces, and basic punctuation
+    const sanitizedQuery = query.replace(/[^a-zA-Z0-9\s\-_.]/g, '');
+    if (!sanitizedQuery) {
       removeHighlights();
       setMatches([]);
       return;
@@ -47,7 +63,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchQuery, setSearchQuery }) =>
       NodeFilter.SHOW_TEXT,
       {
         acceptNode: (node) => {
-          if (node.nodeValue && node.nodeValue.toLowerCase().includes(query.toLowerCase())) {
+          if (node.nodeValue && node.nodeValue.toLowerCase().includes(sanitizedQuery.toLowerCase())) {
             return NodeFilter.FILTER_ACCEPT;
           }
           return NodeFilter.FILTER_REJECT;
@@ -66,23 +82,38 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchQuery, setSearchQuery }) =>
 
     textNodes.forEach(textNode => {
       const text = textNode.nodeValue || '';
-      const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      const lowerText = text.toLowerCase();
+      const lowerQuery = sanitizedQuery.toLowerCase();
       
-      if (regex.test(text)) {
-        const highlightedHTML = text.replace(regex, '<mark class="search-highlight">$1</mark>');
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = highlightedHTML;
-        
+      if (lowerText.includes(lowerQuery)) {
         const parent = textNode.parentNode;
         if (parent) {
           const fragment = document.createDocumentFragment();
-          Array.from(tempDiv.childNodes).forEach(child => {
-            if (child.nodeType === Node.ELEMENT_NODE && (child as Element).tagName === 'MARK') {
-              newHighlightedElements.push(child as Element);
-              newMatches.push(child as Element);
+          let lastIndex = 0;
+          let index = lowerText.indexOf(lowerQuery);
+          
+          while (index !== -1) {
+            // Add text before match
+            if (index > lastIndex) {
+              fragment.appendChild(document.createTextNode(text.slice(lastIndex, index)));
             }
-            fragment.appendChild(child.cloneNode(true));
-          });
+            
+            // Create and add highlight element
+            const matchText = text.slice(index, index + sanitizedQuery.length);
+            const highlightElement = createHighlightElement(matchText);
+            fragment.appendChild(highlightElement);
+            newHighlightedElements.push(highlightElement);
+            newMatches.push(highlightElement);
+            
+            lastIndex = index + sanitizedQuery.length;
+            index = lowerText.indexOf(lowerQuery, lastIndex);
+          }
+          
+          // Add remaining text
+          if (lastIndex < text.length) {
+            fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+          }
+          
           parent.replaceChild(fragment, textNode);
         }
       }
@@ -137,6 +168,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchQuery, setSearchQuery }) =>
             value={searchQuery}
             onChange={(e) => handleSearch(e.target.value)}
             placeholder="Search content..."
+            maxLength={100}
             className="w-full pl-10 pr-4 py-2 bg-netflix-darker border border-netflix-light-gray rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-netflix-red"
           />
         </div>

@@ -7,13 +7,33 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    honeypot: '' // Spam protection honeypot field
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
+  const validateInput = (value: string, maxLength: number): boolean => {
+    return value.length <= maxLength && !/[<>{}]/.test(value);
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    
+    // Input length limits and basic validation
+    const limits = {
+      name: 100,
+      email: 254,
+      message: 2000,
+      honeypot: 0
+    };
+    
+    const maxLength = limits[name as keyof typeof limits] || 100;
+    
+    if (!validateInput(value, maxLength)) {
+      return;
+    }
+    
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -22,6 +42,45 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Spam protection: check honeypot field
+    if (formData.honeypot) {
+      toast({
+        title: "Error",
+        description: "Invalid submission detected.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    // Enhanced validation
+    if (!formData.name.trim() || formData.name.length < 2) {
+      toast({
+        title: "Validation Error",
+        description: "Please enter a valid name (at least 2 characters).",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      toast({
+        title: "Validation Error",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    if (!formData.message.trim() || formData.message.length < 10) {
+      toast({
+        title: "Validation Error",
+        description: "Please enter a message (at least 10 characters).",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -33,7 +92,7 @@ const ContactSection = () => {
         description: "Thank you for your message. I'll get back to you soon!",
       });
       
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', message: '', honeypot: '' });
     } catch (error) {
       toast({
         title: "Error",
@@ -57,9 +116,21 @@ const ContactSection = () => {
           <h3 className="text-2xl font-bold text-white mb-6">Contact Me</h3>
           
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Honeypot field for spam protection - hidden from users */}
+            <div style={{ display: 'none' }}>
+              <input
+                type="text"
+                name="honeypot"
+                value={formData.honeypot}
+                onChange={handleInputChange}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+            
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                Name
+                Name *
               </label>
               <input
                 type="text"
@@ -68,14 +139,19 @@ const ContactSection = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
+                maxLength={100}
+                minLength={2}
                 className="w-full px-4 py-3 bg-netflix-dark border border-netflix-light-gray rounded-lg text-white focus:outline-none focus:border-netflix-red transition-colors duration-300"
                 placeholder="Your Name"
               />
+              <div className="text-xs text-gray-400 mt-1">
+                {formData.name.length}/100 characters
+              </div>
             </div>
             
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                Email
+                Email *
               </label>
               <input
                 type="email"
@@ -84,14 +160,18 @@ const ContactSection = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
+                maxLength={254}
                 className="w-full px-4 py-3 bg-netflix-dark border border-netflix-light-gray rounded-lg text-white focus:outline-none focus:border-netflix-red transition-colors duration-300"
                 placeholder="your.email@example.com"
               />
+              <div className="text-xs text-gray-400 mt-1">
+                {formData.email.length}/254 characters
+              </div>
             </div>
             
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                Message
+                Message *
               </label>
               <textarea
                 id="message"
@@ -100,15 +180,20 @@ const ContactSection = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 required
+                maxLength={2000}
+                minLength={10}
                 className="w-full px-4 py-3 bg-netflix-dark border border-netflix-light-gray rounded-lg text-white focus:outline-none focus:border-netflix-red transition-colors duration-300"
                 placeholder="Your message..."
               />
+              <div className="text-xs text-gray-400 mt-1">
+                {formData.message.length}/2000 characters (minimum 10)
+              </div>
             </div>
             
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-netflix-red hover:bg-red-700 disabled:bg-red-800 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2"
+              disabled={isSubmitting || !formData.name.trim() || !formData.email.trim() || !formData.message.trim()}
+              className="w-full bg-netflix-red hover:bg-red-700 disabled:bg-red-800 disabled:opacity-50 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
               <Send className="w-5 h-5" />
