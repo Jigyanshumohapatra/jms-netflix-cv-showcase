@@ -13,36 +13,28 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: 'Sarah Johnson',
-    role: 'VP of Marketing',
-    company: 'TechCorp Solutions',
-    message: 'Jigyanshu\'s expertise in growth marketing is exceptional. His data-driven approach helped us achieve a 40% increase in qualified leads within just 3 months.',
-    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face',
-    linkedinUrl: 'https://linkedin.com/in/sample'
-  },
-  {
-    name: 'Michael Chen',
-    role: 'CEO',
-    company: 'StartupX',
+    name: 'Nithya Iyer ',
+    role: 'General Manager',
+    company: 'Vakilsearch',
     message: 'Working with Jigyanshu was a game-changer for our SaaS platform. His understanding of customer acquisition funnels and conversion optimization is unmatched.',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-    linkedinUrl: 'https://linkedin.com/in/sample'
+    linkedinUrl: 'https://www.linkedin.com/in/ramanithyaiyer/'
   },
   {
-    name: 'Priya Sharma',
-    role: 'Director of Growth',
-    company: 'FinTech Innovations',
+    name: 'Pratiksha M',
+    role: 'Associate Director, Marketing ',
+    company: 'Clear',
     message: 'Jigyanshu\'s strategic approach to marketing automation and his proficiency with tools like HubSpot and Salesforce delivered measurable results for our team.',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-    linkedinUrl: 'https://linkedin.com/in/sample'
+    avatar: 'https://media.licdn.com/dms/image/v2/D5603AQFzrvREC2Uu8g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1725487289731?e=1754524800&v=beta&t=Xq0Pe2Zqbp-nZklpi3kBrxViyUb2-sWcwwkOLIXdDhc',
+    linkedinUrl: 'https://www.linkedin.com/in/pratiksha-m-990b059a'
   },
   {
-    name: 'David Rodriguez',
-    role: 'Head of Digital Marketing',
-    company: 'Enterprise Solutions',
-    message: 'His ability to manage cross-functional teams while delivering consistent ROI improvements makes Jigyanshu an invaluable asset to any growth-focused organization.',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
-    linkedinUrl: 'https://linkedin.com/in/sample'
+    name: 'Divnay Bhutra S',
+    role: 'Associate Director Digital Marketing',
+    company: 'Clear',
+    message: 'His ability to manage cross-functional teams while delivering consistent ROI improvements makes Jigyanshu an invaluable asset to any growth-focused organisation.',
+    avatar: 'https://media.licdn.com/dms/image/v2/C4E03AQGxd2wtSZejPQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516896008710?e=1754524800&v=beta&t=D9-XiyjJzVMaAyTCRjsXnLyyTsZmcQ1K0SAw8SxIJZo',
+    linkedinUrl: 'https://www.linkedin.com/in/divnay-bhutra-s-92b34699'
   }
 ];
 
