@@ -54,10 +54,45 @@
   body {
     @apply bg-netflix-dark text-foreground font-inter;
     overflow-x: hidden;
+    position: relative;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Animated background gradient */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #141414, #0C0C0C, #1a1a1a, #000000);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    z-index: -2;
+  }
+
+  /* Moving particles background */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, rgba(229, 9, 20, 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.1), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(229, 9, 20, 0.2), transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.1), transparent),
+      radial-gradient(2px 2px at 160px 30px, rgba(229, 9, 20, 0.15), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: moveParticles 20s linear infinite;
+    z-index: -1;
   }
 }
 
@@ -82,6 +117,28 @@
     backdrop-filter: blur(10px);
     background: rgba(20, 20, 20, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Custom animations */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes moveParticles {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-100px);
   }
 }
 
