@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     role: 'General Manager',
     company: 'Vakilsearch',
     message: 'Working with Jigyanshu was a game-changer for our SaaS platform. His understanding of customer acquisition funnels and conversion optimization is unmatched.',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+    avatar: 'https://media.licdn.com/dms/image/v2/D5603AQHWPPhiH_dS9A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1732299756549?e=1754524800&v=beta&t=1r5VlUaAxDABnXfXOQRQOOyxrgjS_P0okB0Oqo1mkuw',
     linkedinUrl: 'https://www.linkedin.com/in/ramanithyaiyer/'
   },
   {
