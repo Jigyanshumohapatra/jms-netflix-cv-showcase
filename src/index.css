@@ -1,0 +1,171 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 20 20% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 24 24% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 24 24% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 0 84% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 20 20% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 84% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 0 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-netflix-dark text-foreground font-inter;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Animated background gradient */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #141414, #0C0C0C, #1a1a1a, #000000);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    z-index: -2;
+  }
+
+  /* Moving particles background */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, rgba(229, 9, 20, 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.1), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(229, 9, 20, 0.2), transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.1), transparent),
+      radial-gradient(2px 2px at 160px 30px, rgba(229, 9, 20, 0.15), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: moveParticles 20s linear infinite;
+    z-index: -1;
+  }
+}
+
+@layer components {
+  .netflix-gradient {
+    background: linear-gradient(135deg, #141414 0%, #0C0C0C 50%, #000000 100%);
+  }
+
+  .netflix-card {
+    @apply bg-netflix-gray border border-netflix-light-gray rounded-lg transition-all duration-300 hover:scale-105 hover:border-netflix-red;
+  }
+
+  .netflix-text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .search-highlight {
+    @apply bg-yellow-400 text-black px-1 rounded;
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Custom animations */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes moveParticles {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E50914;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8070e;
+}
+
+/* Hide scrollbar for skills carousel */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
