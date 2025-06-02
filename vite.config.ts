@@ -5,7 +5,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/", // <-- ADD THIS LINE
+  base: "/", // Changed from "/jms-netflix-cv-showcase/" for custom domain
   server: {
     host: "::",
     port: 8080,
