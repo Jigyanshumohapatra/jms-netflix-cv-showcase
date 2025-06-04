@@ -33,23 +33,23 @@ const skills: Skill[] = [
   { name: 'Google Ads', logo: 'https://cdn.worldvectorlogo.com/logos/google-ads.svg', url: 'https://ads.google.com', category: 'Advertising' },
   { name: 'Meta Ads', logo: 'https://cdn.worldvectorlogo.com/logos/facebook.svg', url: 'https://www.facebook.com/business/ads', category: 'Advertising' },
   
-  // Email Marketing
-  { name: 'Mailchimp', logo: 'https://cdn.worldvectorlogo.com/logos/mailchimp.svg', url: 'https://mailchimp.com', category: 'Email Marketing' },
-  { name: 'Customer.io', logo: 'https://customer.io/static/logos/customer-io-logo.svg', url: 'https://customer.io', category: 'Email Marketing' },
-  { name: 'Klaviyo', logo: 'https://cdn.worldvectorlogo.com/logos/klaviyo.svg', url: 'https://www.klaviyo.com', category: 'Email Marketing' },
-  { name: 'Vero', logo: 'https://www.getvero.com/static/images/vero-logo.svg', url: 'https://www.getvero.com', category: 'Email Marketing' },
-  { name: 'Ortto', logo: 'https://ortto.com/static/images/ortto-logo.svg', url: 'https://ortto.com', category: 'Email Marketing' },
-  { name: 'MoEngage', logo: 'https://www.moengage.com/wp-content/uploads/2020/12/moengage-logo.svg', url: 'https://www.moengage.com', category: 'Email Marketing' },
-  { name: 'Marketo', logo: 'https://cdn.worldvectorlogo.com/logos/marketo.svg', url: 'https://business.adobe.com/products/marketo/marketo.html', category: 'Email Marketing' },
+  // Marketing Automation
+  { name: 'Mailchimp', logo: 'https://cdn.worldvectorlogo.com/logos/mailchimp.svg', url: 'https://mailchimp.com', category: 'Marketing Automation' },
+  { name: 'Customer.io', logo: 'https://customer.io/static/logos/customer-io-logo.svg', url: 'https://customer.io', category: 'Marketing Automation' },
+  { name: 'Klaviyo', logo: 'https://cdn.worldvectorlogo.com/logos/klaviyo.svg', url: 'https://www.klaviyo.com', category: 'Marketing Automation' },
+  { name: 'Vero', logo: 'https://www.getvero.com/static/images/vero-logo.svg', url: 'https://www.getvero.com', category: 'Marketing Automation' },
+  { name: 'Ortto', logo: 'https://ortto.com/static/images/ortto-logo.svg', url: 'https://ortto.com', category: 'Marketing Automation' },
+  { name: 'MoEngage', logo: 'https://www.moengage.com/wp-content/uploads/2020/12/moengage-logo.svg', url: 'https://www.moengage.com', category: 'Marketing Automation' },
+  { name: 'Marketo', logo: 'https://cdn.worldvectorlogo.com/logos/marketo.svg', url: 'https://business.adobe.com/products/marketo/marketo.html', category: 'Marketing Automation' },
   
   // CMS
   { name: 'Webflow', logo: 'https://cdn.worldvectorlogo.com/logos/webflow.svg', url: 'https://webflow.com', category: 'CMS' },
   { name: 'Notion', logo: 'https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg', url: 'https://notion.so', category: 'CMS' },
   
-  // E-commerce
-  { name: 'Gallabox', logo: 'https://gallabox.com/wp-content/uploads/2022/01/gallabox-logo.svg', url: 'https://gallabox.com', category: 'E-commerce' },
-  { name: 'Gupshup', logo: 'https://www.gupshup.io/hubfs/Website_2022/Images/Logo-Blue.svg', url: 'https://www.gupshup.io', category: 'E-commerce' },
-  { name: 'Replo', logo: 'https://www.replo.app/static/images/replo-logo.svg', url: 'https://www.replo.app', category: 'E-commerce' },
+  // Marketing Automation
+  { name: 'Gallabox', logo: 'https://gallabox.com/wp-content/uploads/2022/01/gallabox-logo.svg', url: 'https://gallabox.com', category: 'Marketing Automation' },
+  { name: 'Gupshup', logo: 'https://www.gupshup.io/hubfs/Website_2022/Images/Logo-Blue.svg', url: 'https://www.gupshup.io', category: 'Marketing Automation' },
+  { name: 'Replo', logo: 'https://www.replo.app/static/images/replo-logo.svg', url: 'https://www.replo.app', category: 'Marketing Automation' },
   
   // Data Visualization
   { name: 'Looker Studio', logo: 'https://www.gstatic.com/analytics-suite/header/suite/v2/ic_data_studio.svg', url: 'https://lookerstudio.google.com', category: 'Data Visualization' },
@@ -65,30 +65,32 @@ const skills: Skill[] = [
   { name: 'Napkin', logo: 'https://napkin.one/static/images/napkin-logo.svg', url: 'https://napkin.one', category: 'Design' },
   
   // Automation
-  { name: 'GTM (Google Tag Manager)', logo: 'https://www.gstatic.com/tagmanager/logo.svg', url: 'https://tagmanager.google.com', category: 'Automation' },
-  { name: 'Jasper.ai', logo: 'https://www.jasper.ai/static/images/jasper-logo.svg', url: 'https://www.jasper.ai', category: 'Automation' },
-  { name: 'Copy.ai', logo: 'https://www.copy.ai/static/images/copy-ai-logo.svg', url: 'https://www.copy.ai', category: 'Automation' },
-  { name: 'Anyword', logo: 'https://anyword.com/static/images/anyword-logo.svg', url: 'https://anyword.com', category: 'Automation' },
-  { name: 'Surfer SEO', logo: 'https://surferseo.com/static/images/surfer-logo.svg', url: 'https://surferseo.com', category: 'Automation' },
-  { name: 'Apollo.io', logo: 'https://www.apollo.io/static/images/apollo-logo.svg', url: 'https://www.apollo.io', category: 'Automation' },
-  { name: 'Clay', logo: 'https://www.clay.com/static/images/clay-logo.svg', url: 'https://www.clay.com', category: 'Automation' },
-  { name: 'Cognism', logo: 'https://www.cognism.com/static/images/cognism-logo.svg', url: 'https://www.cognism.com', category: 'Automation' },
-  { name: 'Lusha', logo: 'https://www.lusha.com/static/images/lusha-logo.svg', url: 'https://www.lusha.com', category: 'Automation' },
-  { name: 'Lavender.ai', logo: 'https://www.lavender.ai/static/images/lavender-logo.svg', url: 'https://www.lavender.ai', category: 'Automation' },
-  { name: 'Perplexity AI', logo: 'https://www.perplexity.ai/static/images/perplexity-logo.svg', url: 'https://www.perplexity.ai', category: 'Automation' },
-  { name: 'ChatGPT', logo: 'https://openai.com/static/images/openai-logo.svg', url: 'https://chat.openai.com', category: 'Automation' },
-  { name: 'Claude', logo: 'https://claude.ai/static/images/claude-logo.svg', url: 'https://claude.ai', category: 'Automation' },
-  { name: 'Clarity', logo: 'https://www.clarity.so/static/images/clarity-logo.svg', url: 'https://www.clarity.so', category: 'Automation' },
-  { name: 'Notion AI', logo: 'https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg', url: 'https://www.notion.so/product/ai', category: 'Automation' },
-  { name: 'Fermat', logo: 'https://www.fermat.ws/static/images/fermat-logo.svg', url: 'https://www.fermat.ws', category: 'Automation' },
-  { name: 'Mutiny', logo: 'https://www.mutinyhq.com/static/images/mutiny-logo.svg', url: 'https://www.mutinyhq.com', category: 'Automation' },
-  { name: 'Marktag', logo: 'https://www.marktag.io/static/images/marktag-logo.svg', url: 'https://www.marktag.io', category: 'Automation' },
-  { name: 'Novacene', logo: 'https://novacene.ai/static/images/novacene-logo.svg', url: 'https://novacene.ai', category: 'Automation' },
+  { name: 'GTM (Google Tag Manager)', logo: 'https://www.gstatic.com/tagmanager/logo.svg', url: 'https://tagmanager.google.com', category: 'AI' },
+  { name: 'Jasper.ai', logo: 'https://www.jasper.ai/static/images/jasper-logo.svg', url: 'https://www.jasper.ai', category: 'AI' },
+  { name: 'Copy.ai', logo: 'https://www.copy.ai/static/images/copy-ai-logo.svg', url: 'https://www.copy.ai', category: 'AI' },
+  { name: 'Anyword', logo: 'https://anyword.com/static/images/anyword-logo.svg', url: 'https://anyword.com', category: 'AI' },
+  { name: 'Surfer SEO', logo: 'https://surferseo.com/static/images/surfer-logo.svg', url: 'https://surferseo.com', category: 'AI' },
+  { name: 'Apollo.io', logo: 'https://www.apollo.io/static/images/apollo-logo.svg', url: 'https://www.apollo.io', category: 'AI' },
+  { name: 'Clay', logo: 'https://www.clay.com/static/images/clay-logo.svg', url: 'https://www.clay.com', category: 'AI' },
+  { name: 'Cognism', logo: 'https://www.cognism.com/static/images/cognism-logo.svg', url: 'https://www.cognism.com', category: 'AI' },
+  { name: 'Lusha', logo: 'https://www.lusha.com/static/images/lusha-logo.svg', url: 'https://www.lusha.com', category: 'AI' },
+  { name: 'Lavender.ai', logo: 'https://www.lavender.ai/static/images/lavender-logo.svg', url: 'https://www.lavender.ai', category: 'AI' },
+  { name: 'Perplexity AI', logo: 'https://www.perplexity.ai/static/images/perplexity-logo.svg', url: 'https://www.perplexity.ai', category: 'AI' },
+  { name: 'ChatGPT', logo: 'https://openai.com/static/images/openai-logo.svg', url: 'https://chat.openai.com', category: 'AI' },
+  { name: 'Claude', logo: 'https://claude.ai/static/images/claude-logo.svg', url: 'https://claude.ai', category: 'AI' },
+  { name: 'Clarity', logo: 'https://www.clarity.so/static/images/clarity-logo.svg', url: 'https://www.clarity.so', category: 'AI' },
+  { name: 'Fermat', logo: 'https://www.fermat.ws/static/images/fermat-logo.svg', url: 'https://www.fermat.ws', category: 'AI' },
+  { name: 'Mutiny', logo: 'https://www.mutinyhq.com/static/images/mutiny-logo.svg', url: 'https://www.mutinyhq.com', category: 'AI' },
+  { name: 'Marktag', logo: 'https://www.marktag.io/static/images/marktag-logo.svg', url: 'https://www.marktag.io', category: 'AI' },
+  { name: 'Novacene', logo: 'https://novacene.ai/static/images/novacene-logo.svg', url: 'https://novacene.ai', category: 'AI' },
   
   // Additional tools
   { name: 'SQL', logo: 'https://cdn.worldvectorlogo.com/logos/mysql.svg', url: 'https://www.w3schools.com/sql/', category: 'Data Visualization' },
   { name: 'Bootstrap', logo: 'https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg', url: 'https://getbootstrap.com', category: 'Design' },
-  { name: 'PHP', logo: 'https://cdn.worldvectorlogo.com/logos/php.svg', url: 'https://www.php.net', category: 'Automation' },
+  { name: 'PHP', logo: 'https://cdn.worldvectorlogo.com/logos/php.svg', url: 'https://www.php.net', category: 'Productivity' },
+  { name: 'Jira', logo: 'https://cdn.worldvectorlogo.com/logos/jira-1.svg', url: 'https://www.atlassian.com/software/jira', category: 'Productivity' },
+  { name: 'ClickUp', logo: 'https://cdn.worldvectorlogo.com/logos/clickup.svg', url: 'https://clickup.com', category: 'Productivity' },
+  { name: 'Notion AI', logo: 'https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg', url: 'https://www.notion.so/product/ai', category: 'Productivity' },
 ];
 
 const categories = [
@@ -96,12 +98,11 @@ const categories = [
   'CRM',
   'Analytics',
   'Advertising',
-  'Email Marketing',
   'CMS',
-  'E-commerce',
+  'Productivity',
   'Data Visualization',
   'Design',
-  'Automation'
+  'AI'
 ];
 
 const SkillsSection = () => {
