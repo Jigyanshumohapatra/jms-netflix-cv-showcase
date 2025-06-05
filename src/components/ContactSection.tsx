@@ -33,7 +33,7 @@ const ContactSection = () => {
 
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = "https://docs.google.com/document/d/1VTE5A8nGhrh_PodMNd7DmtvsT1cFfS6b2_ri0Wm9lIo/export?format=pdf";
+    link.href = "https://docs.google.com/document/d/15VZiNqix4H9V7behxGcoZB7F8UjFbHxknUpNX0VEcyk/export?format=pdf";
     link.download = "Jigyanshu_Mohapatra_CV.pdf";
     link.target = "_blank";
     document.body.appendChild(link);
