@@ -15,33 +15,33 @@ const skills: Skill[] = [
   { name: 'Make (Integromat)', logo: 'https://bytebricks.ai/wp-content/uploads/2023/10/logo-make.png', url: 'https://www.make.com', category: 'Marketing Automation' },
   { name: 'Bardeen', logo: 'https://www.insightpartners.com/wp-content/uploads/2022/06/Bardeen.png', url: 'https://www.bardeen.ai', category: 'Marketing Automation' },
   { name: 'Mailchimp', logo: 'https://static-00.iconduck.com/assets.00/mailchimp-icon-1811x2048-u8tnp53p.png', url: 'https://mailchimp.com', category: 'Marketing Automation' },
-  { name: 'Customer.io', logo: 'https://e7.pngegg.com/pngimages/443/936/png-clipart-customer-io-full-logo-tech-companies.png', url: 'https://customer.io', category: 'Marketing Automation' },
+  { name: 'Customer.io', logo: 'https://logovectorseek.com/wp-content/uploads/2021/05/customer-io-logo-vector.png', url: 'https://customer.io', category: 'Marketing Automation' },
   { name: 'Klaviyo', logo: 'https://signalpartners.com/wp-content/uploads/2021/04/klaviyo_logo-1-wpp1629401786301.png', url: 'https://www.klaviyo.com', category: 'Marketing Automation' },
-  { name: 'Vero', logo: 'https://framerusercontent.com/assets/1uTthSsVjFOCLUkn6ejs9EkpF8.png', url: 'https://www.getvero.com', category: 'Marketing Automation' },
+  { name: 'Vero', logo: 'https://mma.prnewswire.com/media/2359828/Vero_AI_Logo.jpg?p=facebook', url: 'https://www.getvero.com', category: 'Marketing Automation' },
   { name: 'Ortto', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS064WKCTogmP3WI6cx_MnglsJr34xz277shw&s', url: 'https://ortto.com', category: 'Marketing Automation' },
-  { name: 'MoEngage', logo: 'https://cdn.prod.website-files.com/663df3b8d87f6d37e73ce768/67e7df71dd2c9090c02f4bb4_Moengage.svg', url: 'https://www.moengage.com', category: 'Marketing Automation' },
+  { name: 'MoEngage', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdh11LdJbwXffIjxJ9ow8NpTFrx95Jbcg6pcJrbe2AAJA0PH_3dN0aMhSSDj8OV0IhTxM&usqp=CAU', url: 'https://www.moengage.com', category: 'Marketing Automation' },
   { name: 'Marketo', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Marketo_logo.svg/2560px-Marketo_logo.svg.png', url: 'https://business.adobe.com/products/marketo/marketo.html', category: 'Marketing Automation' },
   { name: 'Gallabox', logo: 'https://gallabox.com/gallabox-logo.png', url: 'https://gallabox.com', category: 'Marketing Automation' },
   { name: 'Gupshup', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Logo_Gupshup.png', url: 'https://www.gupshup.io', category: 'Marketing Automation' },
-  { name: 'Replo', logo: 'https://fb-usercontent.fra1.cdn.digitaloceanspaces.com/1714489184063..png', url: 'https://www.replo.app', category: 'Marketing Automation' },
+  { name: 'Replo', logo: 'https://app-uploads-cdn.fera.ai/partners/logos/000/002/413/original/replo.png?1692659076', url: 'https://www.replo.app', category: 'Marketing Automation' },
 
   // CRM
-  { name: 'HubSpot', logo: 'https://tl.vhv.rs/dpng/s/445-4455307_hubspot-logo-svg-hd-png-download.png', url: 'https://hubspot.com', category: 'CRM' },
+  { name: 'HubSpot', logo: 'https://images.seeklogo.com/logo-png/27/1/hubspot-logo-png_seeklogo-273533.png', url: 'https://hubspot.com', category: 'CRM' },
   { name: 'Salesforce', logo: 'https://cdn.worldvectorlogo.com/logos/salesforce-2.svg', url: 'https://salesforce.com', category: 'CRM' },
-  { name: 'Leadsquared', logo: 'https://e7.pngegg.com/pngimages/454/311/png-clipart-leadsquared-logo-landscape-tech-companies-thumbnail.png', url: 'https://www.leadsquared.com', category: 'CRM' },
+  { name: 'Leadsquared', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIlfQ1F97E23O1U-4cbJh9asSLY5eCnu57Xw&s', url: 'https://www.leadsquared.com', category: 'CRM' },
 
   // Analytics
-  { name: 'Google Analytics', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0W1flzDxX3S2rZNMiUXFSvbQu2LosW61IwA&s', url: 'https://marketingplatform.google.com/about/analytics/', category: 'Analytics' },
-  { name: 'Mixpanel', logo: 'https://e7.pngegg.com/pngimages/272/883/png-clipart-mixpanel-icon-mixpanel-logo-icons-logos-emojis-tech-companies.png', url: 'https://mixpanel.com', category: 'Analytics' },
-  { name: 'Amplitude', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/02/Amplitude_logo.svg', url: 'https://amplitude.com', category: 'Analytics' },
+  { name: 'Google Analytics', logo: 'https://d3t4nwcgmfrp9x.cloudfront.net/upload/google-analytics-4.png', url: 'https://marketingplatform.google.com/about/analytics/', category: 'Analytics' },
+  { name: 'Mixpanel', logo: 'https://mma.prnewswire.com/media/722004/Mixpanel_Inc_Logo.jpg?p=facebook', url: 'https://mixpanel.com', category: 'Analytics' },
+  { name: 'Amplitude', logo: 'https://logowik.com/content/uploads/images/amplitude9992.jpg', url: 'https://amplitude.com', category: 'Analytics' },
   { name: 'Segment', logo: 'https://cdn.worldvectorlogo.com/logos/segment-1.svg', url: 'https://segment.com', category: 'Analytics' },
-  { name: 'Hotjar', logo: 'https://w7.pngwing.com/pngs/376/663/png-transparent-hotjar-logo-tech-companies-thumbnail.png', url: 'https://hotjar.com', category: 'Analytics' },
+  { name: 'Hotjar', logo: 'https://logowik.com/content/uploads/images/hotjar-new-20214667.jpg', url: 'https://hotjar.com', category: 'Analytics' },
   { name: 'Fullstory', logo: 'https://mms.businesswire.com/media/20240422506260/en/2104021/22/fs-logo-2024-blk.jpg', url: 'https://www.fullstory.com', category: 'Analytics' },
   { name: 'UTM.io', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOfp8j-319Vu8_Mscra-hJTypYfJOSzRt6Ug&s', url: 'https://utm.io', category: 'Analytics' },
 
   // Advertising
-  { name: 'Google Ads', logo: 'https://toppng.com/uploads/preview/google-ads-logo-vector-115738525038dma6lhprs.png', url: 'https://ads.google.com', category: 'Advertising' },
-  { name: 'Meta Ads', logo: 'https://w7.pngwing.com/pngs/606/802/png-transparent-meta-meta-logo-facebook-fb-logo-meta-icon-meta-symbol-facebook-logo-thumbnail.png', url: 'https://www.facebook.com/business/ads', category: 'Advertising' },
+  { name: 'Google Ads', logo: 'https://img.freepik.com/premium-vector/google-ads-logo_578229-305.jpg', url: 'https://ads.google.com', category: 'Advertising' },
+  { name: 'Meta Ads', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROfeUVLSnWz2x-gbw3UbXuR9HduQIBY6otig&s', url: 'https://www.facebook.com/business/ads', category: 'Advertising' },
 
   // CMS
   { name: 'Webflow', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Webflow_logo_2023.svg', url: 'https://webflow.com', category: 'CMS' },
@@ -55,20 +55,20 @@ const skills: Skill[] = [
 
   // Design
   { name: 'Midjourney', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSoksB8_x5uyLs0WyJlDYHzEjj2-3FJp0I2Y0SxiK3bFEArE_QfOFa5CIrhE633CzZBN4&usqp=CAU', url: 'https://www.midjourney.com', category: 'Design' },
-  { name: 'DALL·E', logo: 'https://i.pinimg.com/736x/7e/ee/2f/7eee2fc41654561afbe2ded749b06b29.jpg', url: 'https://openai.com/dall-e', category: 'Design' },
+  { name: 'DALL·E', logo: 'https://images.saasworthy.com/dalle_46093_logo_1702980542_gbe89.png', url: 'https://openai.com/dall-e', category: 'Design' },
   { name: 'Runway', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/Runway_Logo.png', url: 'https://runwayml.com', category: 'Design' },
-  { name: 'Pika', logo: 'https://letmecook.io/wp-content/uploads/2024/05/Pika-Review.png', url: 'https://pika.art', category: 'Design' },
-  { name: 'Descript', logo: 'https://toppng.com/uploads/preview/descript-logo-11609359182ne9b6uus6g.png', url: 'https://www.descript.com', category: 'Design' },
+  { name: 'Pika', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxUGLK3sw5zFe-K_q2ccoocupMq9eHWU5EsLLyhsP9CLml5hX358JMdEFcZsBomR7iJQ&usqp=CAU', url: 'https://pika.art', category: 'Design' },
+  { name: 'Descript', logo: 'https://cdn.mos.cms.futurecdn.net/Uwt3pufBTJv89JEY42sSUJ.jpg', url: 'https://www.descript.com', category: 'Design' },
   { name: 'Napkin', logo: 'https://static.wixstatic.com/media/863c21_cf81fc62b52e44a480d34878e15d226f~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/Logo%20for%20EMA%20-%202025-02-18T144306.862.jpg', url: 'https://napkin.one', category: 'Design' },
-  { name: 'Bootstrap', logo: 'https://w7.pngwing.com/pngs/392/984/png-transparent-responsive-web-design-web-development-bootstrap-web-framework-web-design-purple-template-web-design.png', url: 'https://getbootstrap.com', category: 'Design' },
+  { name: 'Bootstrap', logo: 'https://logovectorseek.com/wp-content/uploads/2019/10/bootstrap-logo-vector.png', url: 'https://getbootstrap.com', category: 'Design' },
 
   // AI & Automation
-  { name: 'GTM (Google Tag Manager)', logo: 'https://s3.amazonaws.com/appforest_uf/f1591196313405x729989262823764100/tag-manager-google-tag-manager-logo-11562938788z1xj4xxirj.png', url: 'https://tagmanager.google.com', category: 'AI' },
+  { name: 'GTM (Google Tag Manager)', logo: 'https://help.chilipiper.com/hc/article_attachments/4497713068947/mceclip7.png', url: 'https://tagmanager.google.com', category: 'AI' },
   { name: 'Jasper.ai', logo: 'https://www.wpcrafter.com/wp-content/uploads/2023/10/jasperai.png', url: 'https://www.jasper.ai', category: 'AI' },
-  { name: 'Copy.ai', logo: 'https://w7.pngwing.com/pngs/947/558/png-transparent-copy-ai-logo-tech-companies.png', url: 'https://www.copy.ai', category: 'AI' },
-  { name: 'Anyword', logo: 'https://banner2.cleanpng.com/lnd/20250227/j/7e23e0e26adef354178cf43dc9c18e.webp', url: 'https://anyword.com', category: 'AI' },
+  { name: 'Copy.ai', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT14c1RIu0V-Xhj9vCFlpjA0a0Go3Q0Pxkwhw&s', url: 'https://www.copy.ai', category: 'AI' },
+  { name: 'Anyword', logo: 'https://comeet-euw-app.s3.amazonaws.com/59/9cd61c6f57485afef7b01ee518264a56887a08b8', url: 'https://anyword.com', category: 'AI' },
   { name: 'Surfer SEO', logo: 'https://p9n2c8y2.delivery.rocketcdn.me/wp-content/uploads/2021/12/Surfer-SEO-Logo-Transparent.png.webp', url: 'https://surferseo.com', category: 'AI' },
-  { name: 'Apollo.io', logo: 'https://e7.pngegg.com/pngimages/496/622/png-clipart-apollo-io-new-logo-tech-companies.png', url: 'https://www.apollo.io', category: 'AI' },
+  { name: 'Apollo.io', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUpqC6anYpsDBgeRYYvOaQhTRElsDfzJ3Llq6Eofs14ROP3EbiL7gPoS14ouH0eGyiFg&usqp=CAU', url: 'https://www.apollo.io', category: 'AI' },
   { name: 'Clay', logo: 'https://freeappsai.com/wp-content/uploads/2024/09/Clay.jpg', url: 'https://www.clay.com', category: 'AI' },
   { name: 'Cognism', logo: 'https://cdn.worldvectorlogo.com/logos/cognism.svg', url: 'https://www.cognism.com', category: 'AI' },
   { name: 'Lusha', logo: 'https://nubela.co/proxycurl/media/dist/lusha.c887b0a6.svg', url: 'https://www.lusha.com', category: 'AI' },
@@ -79,13 +79,13 @@ const skills: Skill[] = [
   { name: 'Clarity', logo: 'https://wpmedia.tealium.com/wp-content/uploads/2022/02/logo_microsoft_microsoftclarity.svg', url: 'https://www.clarity.so', category: 'AI' },
   { name: 'Fermat', logo: 'https://cdn.prod.website-files.com/654e7810e7a3694a66b6323e/67e2923169ac40b3f8cfb88b_Logo%20frame.png', url: 'https://www.fermat.ws', category: 'AI' },
   { name: 'Mutiny', logo: 'https://5.imimg.com/data5/SELLER/Default/2023/10/351277194/HR/EN/IY/18624834/mutiny-personalization-software-500x500.png', url: 'https://www.mutinyhq.com', category: 'AI' },
-  { name: 'Marktag', logo: 'https://static.vecteezy.com/system/resources/previews/007/818/914/non_2x/hash-tag-icon-logo-design-template-free-vector.jpg', url: 'https://www.marktag.io', category: 'AI' },
+  { name: 'Marktag', logo: 'https://static.vecteezy.com/system/resources/previews/027/422/962/non_2x/hashtag-line-icon-stroke-simple-pictogram-illustration-isolated-on-a-white-background-premium-quality-symbol-sign-for-mobile-app-and-web-sites-vector.jpg', url: 'https://www.marktag.io', category: 'AI' },
   { name: 'Novacene', logo: 'https://novacene.ai/wp-content/uploads/2024/09/novacene_logo.png', url: 'https://novacene.ai', category: 'AI' },
 
   // Productivity
-  { name: 'PHP', logo: 'https://toppng.com/uploads/preview/php-logo-transparent-1166094641771wmqwcrxc.png', url: 'https://www.php.net', category: 'Productivity' },
+  { name: 'PHP', logo: 'https://i.pinimg.com/736x/2d/3a/7d/2d3a7d7d1ad7adeded994de246f60c43.jpg', url: 'https://www.php.net', category: 'Productivity' },
   { name: 'Jira', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Jira_Logo.svg/2560px-Jira_Logo.svg.png', url: 'https://www.atlassian.com/software/jira', category: 'Productivity' },
-  { name: 'ClickUp', logo: 'https://e7.pngegg.com/pngimages/672/224/png-clipart-clickup-logo-landscape-tech-companies.png', url: 'https://clickup.com', category: 'Productivity' },
+  { name: 'ClickUp', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPzCkaE8eUNT-WKpnKcveoUXowlHbZSwGbzg&s', url: 'https://clickup.com', category: 'Productivity' },
   { name: 'Notion AI', logo: 'https://cdn.freelogovectors.net/wp-content/uploads/2023/09/notionlogo-freelogovectors.net_.png', url: 'https://www.notion.so/product/ai', category: 'Productivity' },
 ];
 
@@ -149,7 +149,7 @@ const SkillsSection = () => {
               rel="noopener noreferrer"
               className="block p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-gray-200"
             >
-              <div className="w-12 h-12 mx-auto flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto flex items-center justify-center">
                 <img
                   src={skill.logo}
                   alt={`${skill.name} logo`}

@@ -87,8 +87,10 @@ const ContactSection = () => {
                 <MapPin className="w-6 h-6" />
               </div>
               <div>
-                <p className="text-gray-400 text-sm">Location</p>
-                <p className="text-white">Bhubaneswar, Odisha, India</p>
+                <p className="text-gray-400 text-sm">Open to work in</p>
+                <p className="text-white">Pune, Bangalore, Hyderabad, Remote</p>
+                <p className="text-gray-400 text-sm mt-2">Hometown</p>
+                <p className="text-white">Bhubaneswar, Odisha</p>
               </div>
             </div>
           </div>
