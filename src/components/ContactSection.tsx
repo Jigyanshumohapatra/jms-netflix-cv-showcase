@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Download } from 'lucide-react';
+import { Mail, Phone, MapPin, Download, Calendar } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +9,7 @@ const ContactSection = () => {
     message: '',
     honeypot: '' // Anti-spam field
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,14 +22,41 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic spam protection
     if (formData.honeypot) return;
     
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '9aed7eb3-ba37-4d9e-abed-ce8ddf738dc2',
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          botcheck: false
+        }),
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully! I will get back to you soon.');
+        setFormData({ name: '', email: '', message: '', honeypot: '' });
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const downloadCV = () => {
@@ -39,6 +67,10 @@ const ContactSection = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const bookMeeting = () => {
+    window.open("https://calendly.com/jigyanshu3739", "_blank");
   };
 
   return (
@@ -183,11 +215,26 @@ const ContactSection = () => {
             
             <button
               type="submit"
-              className="w-full bg-netflix-red hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105"
+              disabled={isSubmitting}
+              className="w-full bg-netflix-red hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
+          
+          {/* Book Meeting CTA */}
+          <div className="mt-8 pt-6 border-t border-netflix-light-gray">
+            <div className="text-center">
+              <p className="text-gray-300 mb-4">Want to schedule a quick call?</p>
+              <button
+                onClick={bookMeeting}
+                className="bg-transparent border-2 border-netflix-red text-netflix-red hover:bg-netflix-red hover:text-white px-8 py-3 rounded-md font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 mx-auto"
+              >
+                <Calendar className="w-5 h-5" />
+                Book Meet - 30 min call
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
