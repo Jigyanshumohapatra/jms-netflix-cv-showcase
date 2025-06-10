@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 interface Skill {
@@ -12,7 +11,7 @@ const skills: Skill[] = [
   // Marketing Automation
   { name: 'Zapier', logo: 'https://cdn.worldvectorlogo.com/logos/zapier.svg', url: 'https://zapier.com', category: 'Marketing Automation' },
   { name: 'n8n', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/N8n-logo-new.svg/1000px-N8n-logo-new.svg.png?20230204003316', url: 'https://n8n.io', category: 'Marketing Automation' },
-  { name: 'Make (Integromat)', logo: 'https://bytebricks.ai/wp-content/uploads/2023/10/logo-make.png', url: 'https://www.make.com', category: 'Marketing Automation' },
+  { name: 'Make (Integromat)', logo: 'https://cdn.iconscout.com/icon/free/png-256/free-make-logo-icon-download-in-svg-png-gif-file-formats--brand-vol-6-pack-logos-icons-3030145.png', url: 'https://www.make.com', category: 'Marketing Automation' },
   { name: 'Bardeen', logo: 'https://www.insightpartners.com/wp-content/uploads/2022/06/Bardeen.png', url: 'https://www.bardeen.ai', category: 'Marketing Automation' },
   { name: 'Mailchimp', logo: 'https://static-00.iconduck.com/assets.00/mailchimp-icon-1811x2048-u8tnp53p.png', url: 'https://mailchimp.com', category: 'Marketing Automation' },
   { name: 'Customer.io', logo: 'https://logovectorseek.com/wp-content/uploads/2021/05/customer-io-logo-vector.png', url: 'https://customer.io', category: 'Marketing Automation' },
